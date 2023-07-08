@@ -1,5 +1,8 @@
 .header{
   height: 100px;
-  background-color:blueviolet;
+  background-color: rgb(255, 158, 79);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 

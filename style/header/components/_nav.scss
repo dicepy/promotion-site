@@ -1,0 +1,27 @@
+.nav{
+  height: 100px;
+  width: 60%;
+  ul{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    li{
+      display: inline-block;
+      height: 100px;
+      position: relative;
+      a{
+        top: 50%;
+        position: absolute;
+        transform: translate(0, -50%);
+        font-size: 1.5rem;
+        white-space: nowrap;
+        text-decoration: none;
+        color: rgb(44, 128, 255);
+      }
+    }
+  }
+}

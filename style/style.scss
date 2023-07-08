@@ -16,3 +16,17 @@ $local_var:global;
 $holydat_var:none;
 
 @import 'header/header';
+@import 'header/components/logo';
+@import 'header/components/nav';
+@import 'header/components/contacts';
+@import 'main/main';
+@import 'main/components/info';
+@import 'main/components/services';
+@import 'main/components/slider-bottom';
+@import 'main/components/slider';
+@import 'footer/footer';
+@import 'footer/components/logo__bottom';
+@import 'footer/components/contacts__bottom';
+*{
+  box-sizing: border-box;
+}
