@@ -5,4 +5,21 @@
 .img-in-slider{
   height: 500px; 
   margin: auto;
+  background-color: black;
+}
+
+@media (max-width: 650px){
+  .img-in-slider{
+    height: 400px;
+  }
+}
+@media (max-width: 550px){
+  .img-in-slider{
+    height: 350px;
+  }
+}
+@media (max-width: 450px){
+  .img-in-slider{
+    height: 250px;
+  }
 }
