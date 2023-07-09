@@ -250,4 +250,6 @@ legend {
   margin: auto; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Montserrat', Courier, monospace;
+  font-weight: 600; }

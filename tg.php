@@ -2,14 +2,14 @@
 
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
-$comment = $_POST['user_comment'];
+$telegramm = $_POST['user_telegramm'];
 $pagefrom = $_POST['pagefrom'];
-$token = "token";
+$token = "6069651084:AAGDqmnDXgu59pZ7k1do4hifjNPKKu6EfR4";
 $chat_id = "-662471046";
 $arr = array(
     'Имя пользователя: ' => $name,
     'Телефон: ' => '+' .$phone,
-    'Комментарий:' => $comment,
+    'Телеграмм:' => $telegramm,
     'Страница заявки: ' => $pagefrom
   );
   

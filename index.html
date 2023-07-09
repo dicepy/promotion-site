@@ -147,20 +147,21 @@
           
           <div class="window__main">
             <form action="tg.php" method="POST">
-              <h2 class="window__title" style="text-align: center">Малый Пакет</h2>
+              <h2 class="window__title" id="nameofmodal" style="text-align: center"></h2>
               <div class="window_container">
                 <img src="img/малый.png" class='window__img' alt="альтернативный текст">
                 <fieldset>
                   <legend>Имя и фамилия</legend>
-                  <input class="window__nameinput" type="text" name="text_name" id="text_name" placeholder="Иван Иванов"/>
+                  <input id="pagefrom__input" type="hidden" name="pagefrom"/>
+                  <input class="window__nameinput" type="text" name="user_name" id="text_name" placeholder="Иван Иванов"/>
                 </fieldset>
                 <fieldset>
                   <legend>Номер телефона</legend>
-                  <input class="window__phoneinput" type="text" name="text_phone" id="text_phone" placeholder="+799999999999"/>
+                  <input class="window__phoneinput" type="text" name="user_phone" id="text_phone" placeholder="+799999999999"/>
                 </fieldset>
                 <fieldset>
-                  <legend>Электронная почта</legend>
-                  <input class="window__emailinput" type="text" name="text_email" id="text_email" placeholder="ivanivanov@pochta.ru"/>
+                  <legend>Телеграм</legend>
+                  <input class="window__emailinput" type="text" name="user_telegramm" id="text_email" placeholder="ivanivanov@pochta.ru"/>
                 </fieldset>
                 <div class="window__close">&#10006;</div>
                 <button class="btn btn__submit" type="submit">Подтвердить</button>
