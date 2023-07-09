@@ -143,11 +143,33 @@
               </button>
           </div>
         </div>
-        <div class="modalwindoworder" style="position: fixed; display: none; top: 0; left: 0; background-color: rgba(82, 82, 82, 0.5); width: 100vw; height: 100vh; z-index: 5000; justify-content: center; align-items: center;">
-          <div class="window" style="z-index: 10000; ;background-color: black; width: 500px; height: 500px; opacity: 1;">
-
+        <div class="modalwindoworder">
+          
+          <div class="window__main">
+            <form action="tg.php" method="POST">
+              <h2 class="window__title" style="text-align: center">Малый Пакет</h2>
+              <div class="window_container">
+                <img src="img/малый.png" class='window__img' alt="альтернативный текст">
+                <fieldset>
+                  <legend>Имя и фамилия</legend>
+                  <input class="window__nameinput" type="text" name="text_name" id="text_name" placeholder="Иван Иванов"/>
+                </fieldset>
+                <fieldset>
+                  <legend>Номер телефона</legend>
+                  <input class="window__phoneinput" type="text" name="text_phone" id="text_phone" placeholder="+799999999999"/>
+                </fieldset>
+                <fieldset>
+                  <legend>Электронная почта</legend>
+                  <input class="window__emailinput" type="text" name="text_email" id="text_email" placeholder="ivanivanov@pochta.ru"/>
+                </fieldset>
+                <div class="window__close">&#10006;</div>
+                <button class="btn btn__submit" type="submit">Подтвердить</button>
+              </div>
+            </form>
+            
           </div>
         </div>
+
       </div>
       
       <div class="slider-bottom">
