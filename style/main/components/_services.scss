@@ -8,16 +8,16 @@
 }
 
 .product-item {
-  width: 250px;
+  width: 300px;
   text-align: center;
   margin: 25px;
   border-bottom: 2px solid #F5F5F5;
-  background: $orange_cards;
+  background: black;
   font-family: "Open Sans";
   transition: .3s ease-in;
 }
 .product-item:hover {
-  border-bottom: 2px solid $orange_cards;
+  border-bottom: 2px solid $blue;
 }
 .product-item img {
   display: block;
@@ -35,7 +35,7 @@
 }
 .price {
   font-size: 16px;
-  color: $orange_cards;
+  color: $blue;
   display: block;
   margin-bottom: 12px;
 }
@@ -52,7 +52,7 @@
   border:  0;
 }
 .product-item:hover .button {
-  background: $orange_cards;
+  background: $blue;
 }
 
 

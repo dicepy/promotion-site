@@ -1,11 +1,38 @@
+@import '../../colors';
+
 .info{
-  h1{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: $graybold;
+  .zagolovok__1{
     text-align: center;
     margin: 0;
-    padding: 10px;
+    padding: 50px;
+    font-size: 100px;
+    font-weight: 600;
   }
-  p{
+  .par__main{
     margin: 0;
     padding: 0;
   }
+  .ul__main{
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .li__main{
+    border: 3px solid $blue;
+    background-color: $blue;
+    border-radius: 10px;
+    list-style-type:none;
+    font-size: 30px;
+  }
+  .li__main:not(:last-child){
+    margin-bottom: 20px;
+  }
 }
+
+

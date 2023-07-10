@@ -16,9 +16,7 @@ $local_var:global;
 $holydat_var:none;
 
 @import 'header/header';
-@import 'header/components/logo';
-@import 'header/components/nav';
-@import 'header/components/contacts';
+@import 'header/components/menu';
 @import 'main/main';
 @import 'main/components/info';
 @import 'main/components/services';

@@ -3,7 +3,28 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   services = $('.services');
   page = document.getElementById('pagefrom__input');
-  
+  $('#brg__img').on('click',function(){
+    $('#brg__img').animate({opacity:0, right:'-150px'},300);
+    $('#burger__wrap').animate({opacity:1, right:'0px'});
+    $('#cross__img').animate({opacity:1, right:'0px'});
+    $('#blackback').css('display','block');
+    $('#blackback').animate({opacity:1});
+    
+  })
+  $('#burger__wrap').on('click',function(){
+    $('#burger__wrap').animate({opacity:0, right:'1000px'});
+    $('#brg__img').animate({opacity:1, right:'0px'},300);
+    $('#cross__img').animate({opacity:0, right:'-150px'});
+    $('#blackback').css('display','none');
+    $('#blackback').animate({opacity:0});
+  })
+  $('#cross__img').on('click',function(){
+    $('#burger__wrap').animate({opacity:0, right:'1000px'});
+    $('#brg__img').animate({opacity:1, right:'0px'},300);
+    $('#cross__img').animate({opacity:0, right:'-150px'});
+    $('#blackback').css('display','none');
+    $('#blackback').animate({opacity:0});
+  })
   for (el of $('button.button')){
     id = el.id;
     $(`#${id}`).on( "click", function(event) {
