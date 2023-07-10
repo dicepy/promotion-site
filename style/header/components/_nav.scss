@@ -1,6 +1,6 @@
 .nav{
   height: 100px;
-  width: 60%;
+  width: 300px;
   ul{
     display: flex;
     height: 100px;
@@ -9,15 +9,18 @@
     padding: 0;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    align-items: center;
     li{
       display: inline-block;
-      height: 100px;
       position: relative;
+      width: 100%;
+      text-align: center;
       a{
+        
         top: 50%;
-        position: absolute;
         transform: translate(0, -50%);
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        
         white-space: nowrap;
         text-decoration: none;
         color: rgb(44, 128, 255);

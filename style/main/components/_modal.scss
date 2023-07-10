@@ -64,6 +64,7 @@ fieldset {
   font-size: 14px;
   border-radius: 8px;
   margin-bottom: 10px;
+  border: 1px solid azure;
 }
 
 legend {
@@ -71,7 +72,7 @@ legend {
 }
 .window__main {
   z-index: 10000; 
-  background-color: blue;
+  background-color: #587C4E;
   min-width: 600px;
   min-height: 600px;
   opacity: 1; 
@@ -86,6 +87,10 @@ legend {
 .btn__submit{
   width: 150px;
   height: 50px;
-  background-color: white;
-  margin: auto;
+  background-color: #97AB8F;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
 }
