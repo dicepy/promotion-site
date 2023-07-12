@@ -1,38 +1,46 @@
 @import '../../colors';
 
+
 .info{
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  color: $graybold;
-  .zagolovok__1{
-    text-align: center;
-    margin: 0;
-    padding: 50px;
-    font-size: 100px;
-    font-weight: 600;
-  }
-  .par__main{
-    margin: 0;
-    padding: 0;
-  }
-  .ul__main{
-    text-align: center;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .li__main{
-    border: 3px solid $blue;
-    background-color: $blue;
-    border-radius: 10px;
-    list-style-type:none;
-    font-size: 30px;
-  }
-  .li__main:not(:last-child){
-    margin-bottom: 20px;
-  }
+  align-items: center;
+}
+.info__wrapper{
+  width: 50%;
 }
 
+.info__img{
+  width: 50%;
+}
 
+#scroll-to-services{
+  display: flex;
+  height: 40px;
+  width: 120px;
+  background-color: $blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: large;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px $blue;
+}
+
+#scroll-to-services:hover{
+  background-color: $lightblue;
+  color: white;
+  box-shadow: 0px 0px 3px $lightblue;
+}
+
+.info__zagolovok{
+  font-weight: 600;
+  margin: 15px 0px;
+}
+
+.info__text{
+  font-weight: 400;
+  margin: 15px 0px;
+}

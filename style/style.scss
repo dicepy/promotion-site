@@ -16,18 +16,27 @@ $local_var:global;
 $holydat_var:none;
 
 @import 'header/header';
-@import 'header/components/menu';
+@import 'header/components/logo';
+@import 'header/components/contacts';
+@import 'header/components/nav';
 @import 'main/main';
 @import 'main/components/info';
 @import 'main/components/services';
 @import 'main/components/slider-bottom';
 @import 'main/components/slider';
-@import 'footer/footer';
-@import 'footer/components/logo__bottom';
-@import 'footer/components/contacts__bottom';
 @import 'main/components/modal';
+@import 'header/components/burger';
+@import 'colors';
+@import 'main/components/guarantees';
+@import 'main/components/otzivi';
 *{
   box-sizing: border-box;
   font-family:'Roboto';
   font-weight: 600;
+  color: $graybold;
+}
+
+
+.html{
+  scroll-behavior: smooth;
 }

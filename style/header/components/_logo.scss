@@ -1,0 +1,12 @@
+.logo{
+  display: flex;
+  align-items: center;
+  color: $graybold;
+  h1{
+    margin: 0;
+  }
+}
+
+.logo__img{
+  height: 70px;
+}

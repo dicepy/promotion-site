@@ -1,0 +1,36 @@
+.nav__header{
+  height: 70px;
+}
+
+.list__nav{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 70px;
+}
+
+.li__nav:not(:last-child){
+  margin-right: 20px;
+}
+
+.li__nav{
+  list-style-type: none;
+  font-size: 20px;
+}
+
+@media(max-width:700px){
+  .li__nav{
+    margin-bottom: 40px;
+  }
+}
+
+.nav__menu{
+  justify-content: space-around;
+  width: 300px;
+}
+
+.nonedec{
+  text-decoration: none;
+}
