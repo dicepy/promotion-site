@@ -40,3 +40,22 @@ $holydat_var:none;
 .html{
   scroll-behavior: smooth;
 }
+
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+  } 
+img[data-src] {
+  opacity: 0;
+} 
+
+.element-animation{
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}

@@ -67,17 +67,24 @@
 
 .li__nav {
   list-style-type: none;
-  font-size: 20px; }
+  font-size: 20px;
+  transition: .3s; }
 
 @media (max-width: 700px) {
   .li__nav {
     margin-bottom: 40px; } }
+@media (max-width: 900px) {
+  .nav__menu {
+    display: none; } }
 .nav__menu {
   justify-content: space-around;
-  width: 300px; }
+  width: 500px; }
 
 .nonedec {
-  text-decoration: none; }
+  cursor: pointer; }
+
+.active {
+  color: #ff4646; }
 
 .main {
   margin-top: 70px;
@@ -528,3 +535,19 @@ fieldset {
 
 .html {
   scroll-behavior: smooth; }
+
+img {
+  opacity: 1;
+  transition: opacity 0.3s; }
+
+img[data-src] {
+  opacity: 0; }
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(50px); }
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%); }

@@ -1,17 +1,19 @@
+@import '../../colors';
+
 .contacts__header{
   margin-right: 20px;
 }
 
 .number__header{
   height: 40px;
-  background-color: rgb(255, 70, 70);
+  background-color: $red;
   border-radius: 6px;
   display: flex;
   align-items: center;
   padding: 0px 10px;
   font-size: 15px !important;
   transition: .3s;
-  box-shadow: 0px 0px 3px rgb(255, 70, 70);
+  box-shadow: 0px 0px 3px $red;
   color: white;
 }
 
@@ -25,8 +27,8 @@
 }
 
 .number__header:hover{
-  background-color: rgb(255, 120, 120);
-  box-shadow: 0px 0px 3px rgb(255, 120, 120);
+  background-color: $lightred;
+  box-shadow: 0px 0px 3px $lightred;
   .phone__number{
     color: white;
   }

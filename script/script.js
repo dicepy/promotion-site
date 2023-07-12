@@ -3,7 +3,40 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   services = $('.services');
   page = document.getElementById('pagefrom__input');
- 
+  window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY +150;
+  
+    if (window.innerWidth > 700) {
+      document.querySelectorAll('.section').forEach((el, i) => {
+        if (el.offsetTop - document.querySelector('.list__nav').clientHeight <= scrollDistance) {
+          document.querySelectorAll('.li__nav').forEach((el) => {
+            if (el.classList.contains('active')) {
+              el.classList.remove('active');
+            }
+          });
+          document.querySelectorAll('span')[i].querySelector('.li__nav').classList.add('active');
+        }
+      });
+    }
+  });
+  [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+   img.setAttribute('src', img.getAttribute('data-src'));
+    img.onload = function() { img.removeAttribute('data-src');
+   }; 
+  });
+  function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add('element-show');
+      }
+    });
+  }
+  let options = { threshold: [0] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.element-animation');
+  for (let elm of elements) {
+    observer.observe(elm);
+  };
   function processInput(phone){
     var iti = window.intlTelInput(phone,{
       allowDropdown: false,
@@ -31,6 +64,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
     scrollTop: $("#services").offset().top // класс объекта к которому приезжаем
     }, 0); // Скорость прокрутки
    });
+  $('#1').on('click',function(){
+    const onas = document.getElementById('onas');
+    onas.scrollIntoView({block: "center", inline: "center"});
+  });
+  $('#2').on('click',function(){
+    const onas = document.getElementById('garantii');
+    onas.scrollIntoView({block: "center", inline: "center"});
+  });
+  $('#3').on('click',function(){
+    const onas = document.getElementById('etapi');
+    onas.scrollIntoView({block: "center", inline: "center"});
+  });
+  $('#4').on('click',function(){
+    const onas = document.getElementById('mega');
+    onas.scrollIntoView({block: "end", inline: "center"});
+  });
+  $('#5').on('click',function(){
+    const onas = document.getElementById('otziv');
+    onas.scrollIntoView({block: "center", inline: "center"});
+  });
+  
    
 
   $('#brg__img').on('click',function(){
