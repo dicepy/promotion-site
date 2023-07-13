@@ -1,8 +1,18 @@
 
-
 document.addEventListener('DOMContentLoaded', (event) => {
   services = $('.services');
   page = document.getElementById('pagefrom__input');
+  totalprice = document.getElementById('totalprice');
+
+
+  var element = document.querySelector('.telofperson');
+  var maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+  var mask = IMask(element, maskOptions);
+
+
+
   window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY +150;
   
@@ -37,27 +47,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   for (let elm of elements) {
     observer.observe(elm);
   };
-  function processInput(phone){
-    var iti = window.intlTelInput(phone,{
-      allowDropdown: false,
-      initialCountry: 'RU',
-      nationalMode: true,
-      autoPlaceholder: 'aggressive',
-      formatOnDisplay: true,
-      separateDialCode: false,
-      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/utils.min.js'
-    });
-    phone.addEventListener('input', ()=> {
-      phone.setCustomValidity('');
-        if (!iti.isValidNumber()) phone.setCustomValidity('Проверьте введённые данные');
-    });
-  }
-
-  var phones=document.querySelectorAll('input[name=user_phone]');
-	for (var i = phones.length - 1; i >= 0; i--) {
-		processInput(phones[i]);
-	}
-
+  
 
   $("#scroll-to-services").click(function() { 
     $('html, body').animate({
@@ -127,47 +117,67 @@ document.addEventListener('DOMContentLoaded', (event) => {
     $(`#${id}`).on( "click", function(event) {
       event.preventDefault();
       if (event.currentTarget.id == 'lil'){
+        $('#price__order').css('display','block');
         $('.inputs').css('display','block');
-        $('btn__submit').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Малый пакет'
+        $('.btn').css('display','inline-block');
+        document.getElementById('nameofmodal').textContent = 'Малый пакет';
+        document.getElementById('modal__price').textContent = '4990';
+        document.getElementById('modal__price').setAttribute('data-price','4990');
+        totalprice.value = '4990'
         page.value = 'Малый пакет'
         
       }
       if (event.currentTarget.id == 'mid'){
+        $('#price__order').css('display','block');
         $('.inputs').css('display','block');
         $('.btn').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Средний пакет'
+        document.getElementById('nameofmodal').textContent = 'Средний пакет';
+        document.getElementById('modal__price').textContent = '8990';
+        document.getElementById('modal__price').setAttribute('data-price','8990');
+        totalprice.value = '8990'
         page.value = 'Средний пакет'
       }
       if (event.currentTarget.id == 'large'){
+        $('#price__order').css('display','block');
         $('.inputs').css('display','block');
         $('.btn').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Большой пакет'
+        document.getElementById('nameofmodal').textContent = 'Большой пакет';
+        document.getElementById('modal__price').textContent = '14990';
+        document.getElementById('modal__price').setAttribute('data-price','14990');
+        totalprice.value = '14990'
         page.value = 'Большой пакет'
       }
       if (event.currentTarget.id == 'insane'){
+        $('#price__order').css('display','block');
         $('.inputs').css('display','block');
         $('.btn').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Огромный пакет'
+        document.getElementById('nameofmodal').textContent = 'Огромный пакет';
+        document.getElementById('modal__price').textContent = '29990';
+        document.getElementById('modal__price').setAttribute('data-price','29990');
+        totalprice.value = '29990'
         page.value = 'Огромный пакет'
       }
       if (event.currentTarget.id == 'lilinfo'){
-        document.getElementById('nameofmodal').textContent = 'Малый пакет'
+        document.getElementById('nameofmodal').textContent = 'Малый пакет';
+        $('#price__order').css('display','none');
         $('.inputs').css('display','none');
         $('.btn').css('display','none');
       }
       if (event.currentTarget.id == 'midinfo'){
-        document.getElementById('nameofmodal').textContent = 'Средний пакет'
+        document.getElementById('nameofmodal').textContent = 'Средний пакет';
+        $('#price__order').css('display','none');
         $('.inputs').css('display','none');
         $('.btn').css('display','none');
       }
       if (event.currentTarget.id == 'largeinfo'){
-        document.getElementById('nameofmodal').textContent = 'Большой пакет'
+        document.getElementById('nameofmodal').textContent = 'Большой пакет';
+        $('#price__order').css('display','none');
         $('.inputs').css('display','none');
         $('.btn').css('display','none');
       }
       if (event.currentTarget.id == 'insaneinfo'){
-        document.getElementById('nameofmodal').textContent = 'Огромный пакет'
+        document.getElementById('nameofmodal').textContent = 'Огромный пакет';
+        $('#price__order').css('display','none');
         $('.inputs').css('display','none');
         $('.btn').css('display','none');
       }
@@ -181,6 +191,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('text_name').value = '';
         document.getElementById('text_phone').value = '';
         document.getElementById('text_email').value = '';
+        document.getElementById('text_promo').value = '';
+        document.getElementById('promofield').classList.remove('invalidpromo');
         $(`.modalwindoworder`).css('opacity', '0');
         setTimeout(function(){
         $(`.modalwindoworder`).css('display', 'none');

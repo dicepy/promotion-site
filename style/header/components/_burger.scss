@@ -10,6 +10,7 @@
   border-radius: 10%;
   cursor: pointer;
   background-color: rgba($color: $graybold, $alpha: 0.3);
+  z-index: 20001;
 }
 
 #cross__img{
@@ -40,6 +41,7 @@
   width: 100vw;
   height: 100vh;
   top: 0;
+  z-index: 19000;
 }
 
 .burger__wrapper{
