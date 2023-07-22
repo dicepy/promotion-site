@@ -1,0 +1,92 @@
+.onas{
+  margin-top: 50px;
+}
+
+#zagonas{
+  font-size: 50px;
+  margin: 0px;
+  color: $white;
+  font-family: 'DrukTextWideCyr';
+  margin-bottom: 50px;
+}
+
+.onas__itemcontainer{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  
+}
+
+.onas__item{
+  font-family: 'Raleway-Regular';
+  margin:10px;
+  padding: 30px;
+  font-size: 25px;
+  min-height: 300px;
+  border: 1px solid white;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#onas__itemfirst{
+  background-color: $containergreen;
+  border: none;
+  color: $blackback;
+  margin-left: 100px;
+  width: 60%;
+  padding: 60px;
+}
+
+#onas__itemfourth{
+  padding: 100px;
+}
+
+.numbers__onas{
+  font-family: 'DrukTextWideCyr';
+  font-size: 40px;
+  margin: 20px 0px;
+}
+
+.yellowparticle{
+  width: 90%;
+  min-width: 300px;
+  position: absolute;
+  top: 10%;
+  left: -50%;
+  z-index: -1;
+}
+
+
+@media (max-width: 900px){
+  .onas__itemcontainer{
+    flex-wrap: wrap;
+  }
+  .onas__item, #onas__itemfirst, #onas__itemfourth{
+    width: 100%;
+    margin: 20px;
+    padding: 50px;
+  }
+}
+
+@media (max-width: 600px){
+  .onas__item, #onas__itemfourth{
+    font-size: large;
+  }
+  #onas__itemfirst{
+    font-size: larger;
+  }
+  #zagonas{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px){
+  #zagonas{
+    text-align: center;
+  }
+}

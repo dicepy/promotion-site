@@ -1,2 +1,89 @@
-промокоды
-номер в инпуте с +7
+
+#scroll-to-services{
+  display: flex;
+  height: 40px;
+  width: 120px;
+  background-color: $blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: large;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px $blue;
+}
+
+#scroll-to-services:hover{
+  background-color: $lightblue;
+  color: white;
+  box-shadow: 0px 0px 3px $lightblue;
+}
+
+
+<div class="services section element-animation" id="services">
+<div class="product-item">
+  <img data-src="img/малый.webp" alt="малый пакет">
+  <div class="product-list">
+    <h3>Пакет малый</h3>
+      <span class="price">₽ 4990</span>
+      <div class="button__holder">
+        <button type="button" class="button" id="lilinfo">
+          Подробнее
+        </button>
+        <button type="button" class="button" id="lil">
+          Заказать
+        </button>
+      </div>
+      
+  </div>
+</div>
+<div class="product-item">
+  <img data-src="img/средний.webp" alt="средний пакет">
+  <div class="product-list">
+    <h3>Пакет средний</h3>
+      <span class="price">₽ 8990</span>
+      <div class="button__holder">
+        <button type="button" class="button" id="midinfo">
+          Подробнее
+        </button>
+        <button type="button" class="button" id="mid">
+          Заказать
+        </button>
+      </div>
+  </div>
+</div>
+<div class="product-item">
+  <img data-src="img/Большой.webp" alt="большой пакет">
+  <div class="product-list">
+    <h3>Пакет большой</h3>
+      <span class="price">₽ 14990</span>
+      <div class="button__holder">
+        <button type="button" class="button" id="largeinfo">
+          Подробнее
+        </button>
+        <button type="button" class="button" id="large">
+          Заказать
+        </button>
+      </div>
+  </div>
+</div>
+<div class="product-item">
+  <img data-src="img/Мега.webp" id="mega" alt="мега пакет">
+  <div class="product-list">
+    <h3>Пакет мега</h3>
+      <span class="price">₽ 29990</span>
+      <div class="button__holder">
+        <button type="button" class="button" id="insaneinfo">
+          Подробнее
+        </button>
+        <button type="button" class="button" id="insane">
+          Заказать
+        </button>
+      </div>
+  </div>
+</div>
+
+
+</div>

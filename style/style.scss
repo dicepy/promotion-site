@@ -21,24 +21,24 @@ $holydat_var:none;
 @import 'header/components/nav';
 @import 'main/main';
 @import 'main/components/info';
-@import 'main/components/services';
-@import 'main/components/slider-bottom';
-@import 'main/components/slider';
-@import 'main/components/modal';
-@import 'header/components/burger';
-@import 'colors';
-@import 'main/components/guarantees';
+@import 'main/components/onas';
+@import 'main/components/uslugi';
+@import 'main/components/specs';
 @import 'main/components/otzivi';
+@import 'main/components/reasons';
+@import 'main/components/meet';
+@import 'header/components/burger';
+@import 'footer/footer';
+
+@import 'colors';
 *{
   box-sizing: border-box;
-  font-family:'Roboto';
-  font-weight: 600;
-  color: $graybold;
 }
 
 
 .html{
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 img {
@@ -59,3 +59,29 @@ img[data-src] {
   transition: all 1.5s;
   transform: translateY(0%);
 }
+
+@font-face {
+  font-family: "Raleway-Bold"; 
+  // адрес шрифта и тип 
+  src: url("../../../fonts/Raleway-Bold.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+  } 
+
+@font-face {
+  font-family: "DrukTextWideCyr"; 
+  // адрес шрифта и тип 
+  src: url("../../../fonts/druktextwidecyr-medium.otf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+  } 
+
+  
+
+@font-face {
+  font-family: "Raleway-Regular"; 
+  // адрес шрифта и тип 
+  src: url("../../../fonts/Raleway-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+  } 

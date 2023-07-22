@@ -1,12 +1,20 @@
+@import '../../colors';
+
 .logo{
-  display: flex;
-  align-items: center;
-  color: $graybold;
-  h1{
-    margin: 0;
+  .logo__name{
+    font-family: 'DrukTextWideCyr';
+    font-size: 2.5em;
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .logo__namecontainer{
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.logo__img{
-  height: 70px;
-}
+

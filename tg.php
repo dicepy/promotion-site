@@ -5,19 +5,13 @@
 $txt = '';
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
-$telegramm = $_POST['user_telegramm'];
-$usluga = $_POST['pagefrom'];
-$totalprice = $_POST['totalprice'];
 $promo = $_POST['user_promo'];
 $token = "";
 $chat_id = "-1001956222497";
 $arr = array(
   'Имя пользователя: ' => $name,
   'Телефон: ' => $phone,
-  'Telegram: ' => $telegramm,
-  'Услуга: ' => $usluga,
   'Промокод: ' => $promo,
-  'Цена с промокодом: ' => $totalprice ,
 );
 
 foreach($arr as $key => $value) {

@@ -1,8 +1,57 @@
-.footer{
+@import '../colors';
+
+footer{
   height: 100px;
-  background-color: rgb(255, 158, 79);
+  background-color: $purple;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  overflow: hidden;
+  align-items: center;
+}
+
+.footer__zag{
+  font-family: 'Raleway-Bold';
+  color: $white;
+  font-size: 20px;
+  padding-left: 30px;
+  margin-right: 10px;
+}
+
+.footer__imgscont{
+  display: flex;
+  align-items: center;
+  margin-right: 25%;
+}
+
+.footer__img{
+  height: 60px;
+  margin-left: 30px;
+}
+
+#vk{
+  height: 50px;
+}
+
+.footer__contacts{
+  font-family: 'Raleway-Bold';
+  color: $white;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+
+@media (max-width: 1000px){
+  .footer__zag{
+    display: none;
+  }
+  .footer__imgscont{
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px){
+  .footer__img{
+    height: 40px;
+  }
+  #vk{
+    height: 30px;
+  }
 }

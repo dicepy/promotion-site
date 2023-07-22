@@ -1,9 +1,74 @@
+let scrolls = {
+  '1':{
+    'place': 'otzivi',
+    'type': 'center'
+  },
+  '2':{
+    'place': 'uslugi',
+    'type': 'center'
+  },
+  '3':{
+    'place': 'footer',
+    'type': 'center'
+  },
+  'uslugi__btn':{
+    'place': 'meet',
+    'type': 'center'
+  },
+  'gosecond':{
+    'place': 'meet',
+    'type': 'center'
+  },
+  'gofirst':{
+    'place': 'meet',
+    'type': 'center'
+  },
+  'mob1':{
+    'place': 'otzivi',
+    'type': 'center'
+  },
+  'mob2':{
+    'place': 'uslugi',
+    'type': 'center'
+  },
+  'mob3':{
+    'place': 'footer',
+    'type': 'center'
+  },
+  'burger__btn':{
+    'place': 'meet',
+    'type': 'center'
+  },
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
   services = $('.services');
   page = document.getElementById('pagefrom__input');
   totalprice = document.getElementById('totalprice');
+  let burgeropen = () => {
+    $('#brg__img').animate({opacity:0, right:'-150px'},300);
+    $('#burger__wrap').css('display','block');
+    $('#burger__wrap').animate({opacity:1, right:'0px'},300);
+    
+    $('#cross__img').animate({opacity:1, right:'0px'},300);
+    $('#blackback').css('display','block');
+    $('#blackback').animate({opacity:1},300);
+   }
 
+   let burgerclose = (event) => {
+    if (event.target.id == 'burger__wrap' || event.target.id == 'cross__img'
+    || event.target.id == 'mob1' || event.target.id == 'mob2'
+    || event.target.id == 'mob3' || event.target.id == 'burger__btn'){
+      $('#burger__wrap').animate({opacity:0, right:'1000px'},300);
+      $('#brg__img').animate({opacity:1, right:'0px'},300);
+      $('#cross__img').animate({opacity:0, right:'-150px'},300);
+      $('#blackback').css('display','none');
+      $('#blackback').animate({opacity:0},300);
+      setTimeout(function(){
+        $('#burger__wrap').css('display','none');
+        },300)
+    }
+   }
 
   var element = document.querySelector('.telofperson');
   var maskOptions = {
@@ -11,29 +76,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   };
   var mask = IMask(element, maskOptions);
 
-
-
-  window.addEventListener('scroll', () => {
-    let scrollDistance = window.scrollY +150;
-  
-    if (window.innerWidth > 700) {
-      document.querySelectorAll('.section').forEach((el, i) => {
-        if (el.offsetTop - document.querySelector('.list__nav').clientHeight <= scrollDistance) {
-          document.querySelectorAll('.li__nav').forEach((el) => {
-            if (el.classList.contains('active')) {
-              el.classList.remove('active');
-            }
-          });
-          document.querySelectorAll('span')[i].querySelector('.li__nav').classList.add('active');
-        }
-      });
-    }
-  });
-  [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-   img.setAttribute('src', img.getAttribute('data-src'));
-    img.onload = function() { img.removeAttribute('data-src');
-   }; 
-  });
   function onEntry(entry) {
     entry.forEach(change => {
       if (change.isIntersecting) {
@@ -47,157 +89,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
   for (let elm of elements) {
     observer.observe(elm);
   };
-  
 
-  $("#scroll-to-services").click(function() { 
-    $('html, body').animate({
-    scrollTop: $("#services").offset().top // класс объекта к которому приезжаем
-    }, 0); // Скорость прокрутки
-   });
-  $('#1').on('click',function(){
-    const onas = document.getElementById('onas');
-    onas.scrollIntoView({block: "center", inline: "center"});
+  window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY - 200;
+    if (window.innerWidth > 700) {
+      document.querySelectorAll('.section').forEach((el, i) => {
+        if (el.offsetTop - document.querySelector('.list__nav').clientHeight <= scrollDistance) {
+          document.querySelectorAll('.li__nav').forEach((el) => {
+            if (el.classList.contains('active')) {
+              el.classList.remove('active');
+            }
+          });
+          document.querySelectorAll('span')[i].querySelector('.li__nav').classList.add('active');
+        }
+      });
+    } 
   });
-  $('#2').on('click',function(){
-    const onas = document.getElementById('garantii');
-    onas.scrollIntoView({block: "center", inline: "center"});
-  });
-  $('#3').on('click',function(){
-    const onas = document.getElementById('etapi');
-    onas.scrollIntoView({block: "center", inline: "center"});
-  });
-  $('#4').on('click',function(){
-    const onas = document.getElementById('mega');
-    onas.scrollIntoView({block: "end", inline: "center"});
-  });
-  $('#5').on('click',function(){
-    const onas = document.getElementById('otziv');
-    onas.scrollIntoView({block: "center", inline: "center"});
+  [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+   img.setAttribute('src', img.getAttribute('data-src'));
+    img.onload = function() { img.removeAttribute('data-src');
+   }; 
   });
   
-   
+  const scrolltoblock = (placeto, to='nearest') => {
+    let place = document.getElementById(placeto);
+    place.scrollIntoView({block: to, inline: "center"});
+  }
 
+  $('body').on('click', (event) => {
+    for (scrollitem in scrolls){
+      if (event.target.id === scrollitem){
+        scrolltoblock(scrolls[event.target.id]['place'], scrolls[event.target.id]['type'])
+      }
+    }
+  })
   $('#brg__img').on('click',function(){
-    $('#brg__img').animate({opacity:0, right:'-150px'},300);
-    $('#burger__wrap').css('display','block');
-    $('#burger__wrap').animate({opacity:1, right:'0px'},300);
-    
-    $('#cross__img').animate({opacity:1, right:'0px'},300);
-    $('#blackback').css('display','block');
-    $('#blackback').animate({opacity:1},300);
-    
+    burgeropen();
   })
   $('#burger__wrap').on('click',function(event){
-    if (event.target.id == 'burger__wrap'){
-      $('#burger__wrap').animate({opacity:0, right:'1000px'},300);
-    
-      $('#brg__img').animate({opacity:1, right:'0px'},300);
-      $('#cross__img').animate({opacity:0, right:'-150px'},300);
-      $('#blackback').css('display','none');
-      $('#blackback').animate({opacity:0},300);
-      setTimeout(function(){
-        $('#burger__wrap').css('display','none');
-        },300)
-    }
-    
+    burgerclose(event);
   })
-  $('#cross__img').on('click',function(){
-    $('#burger__wrap').animate({opacity:0, right:'1000px'},300);
-    
-    $('#brg__img').animate({opacity:1, right:'0px'},300);
-    $('#cross__img').animate({opacity:0, right:'-150px'},300);
-    $('#blackback').css('display','none');
-    $('#blackback').animate({opacity:0},300);
-    setTimeout(function(){
-      $('#burger__wrap').css('display','none');
-      },300)
+  $('#cross__img').on('click',function(event){
+    burgerclose(event);
   })
-  for (el of $('button.button')){
-    id = el.id;
-    $(`#${id}`).on( "click", function(event) {
-      event.preventDefault();
-      if (event.currentTarget.id == 'lil'){
-        $('#price__order').css('display','block');
-        $('.inputs').css('display','block');
-        $('.btn').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Малый пакет';
-        document.getElementById('modal__price').textContent = '4990';
-        document.getElementById('modal__price').setAttribute('data-price','4990');
-        totalprice.value = '4990'
-        page.value = 'Малый пакет'
-        
-      }
-      if (event.currentTarget.id == 'mid'){
-        $('#price__order').css('display','block');
-        $('.inputs').css('display','block');
-        $('.btn').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Средний пакет';
-        document.getElementById('modal__price').textContent = '8990';
-        document.getElementById('modal__price').setAttribute('data-price','8990');
-        totalprice.value = '8990'
-        page.value = 'Средний пакет'
-      }
-      if (event.currentTarget.id == 'large'){
-        $('#price__order').css('display','block');
-        $('.inputs').css('display','block');
-        $('.btn').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Большой пакет';
-        document.getElementById('modal__price').textContent = '14990';
-        document.getElementById('modal__price').setAttribute('data-price','14990');
-        totalprice.value = '14990'
-        page.value = 'Большой пакет'
-      }
-      if (event.currentTarget.id == 'insane'){
-        $('#price__order').css('display','block');
-        $('.inputs').css('display','block');
-        $('.btn').css('display','inline-block');
-        document.getElementById('nameofmodal').textContent = 'Огромный пакет';
-        document.getElementById('modal__price').textContent = '29990';
-        document.getElementById('modal__price').setAttribute('data-price','29990');
-        totalprice.value = '29990'
-        page.value = 'Огромный пакет'
-      }
-      if (event.currentTarget.id == 'lilinfo'){
-        document.getElementById('nameofmodal').textContent = 'Малый пакет';
-        $('#price__order').css('display','none');
-        $('.inputs').css('display','none');
-        $('.btn').css('display','none');
-      }
-      if (event.currentTarget.id == 'midinfo'){
-        document.getElementById('nameofmodal').textContent = 'Средний пакет';
-        $('#price__order').css('display','none');
-        $('.inputs').css('display','none');
-        $('.btn').css('display','none');
-      }
-      if (event.currentTarget.id == 'largeinfo'){
-        document.getElementById('nameofmodal').textContent = 'Большой пакет';
-        $('#price__order').css('display','none');
-        $('.inputs').css('display','none');
-        $('.btn').css('display','none');
-      }
-      if (event.currentTarget.id == 'insaneinfo'){
-        document.getElementById('nameofmodal').textContent = 'Огромный пакет';
-        $('#price__order').css('display','none');
-        $('.inputs').css('display','none');
-        $('.btn').css('display','none');
-      }
-      $(`.modalwindoworder`).css('display', 'flex');
-      setTimeout(function(){
-        $(`.modalwindoworder`).css('opacity', '1');
-      },50);
-    } );
-    $(`.modalwindoworder`).on( "click", function(event) {
-      if ($(event.target).attr('class')==='modalwindoworder' | $(event.target).attr('class')==='window__close'){
-        document.getElementById('text_name').value = '';
-        document.getElementById('text_phone').value = '';
-        document.getElementById('text_email').value = '';
-        document.getElementById('text_promo').value = '';
-        document.getElementById('promofield').classList.remove('invalidpromo');
-        $(`.modalwindoworder`).css('opacity', '0');
-        setTimeout(function(){
-        $(`.modalwindoworder`).css('display', 'none');
-        },300);
-      }
-    })
-  }
 })

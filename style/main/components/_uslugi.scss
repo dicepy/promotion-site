@@ -1,0 +1,140 @@
+@import '../../colors';
+
+
+.uslugi{
+  margin: 50px 0;
+}
+
+
+.uslugi__container{
+  display: flex;
+}
+
+.uslugi__zag{
+  font-family: 'DrukTextWideCyr';
+  color: white;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+.uslugi__podz{
+  color: $lightgreen;
+  font-size: 30px;
+}
+
+.uslugi__li{
+  list-style-type: none;
+  color: white;
+  font-family: 'Raleway-Regular';
+  font-size: 30px;
+  border-bottom: 1px solid $white;
+  padding: 10px 0px;
+  
+}
+
+.uslugi__list{
+  padding: 0;
+  margin-left: 40px;
+}
+
+.uslugi__particle{
+  position: absolute;
+  width: 55%;
+  top: 20%;
+  left: -20%;
+  z-index: -1;
+}
+
+.uslugi__bot{
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.uslugi__btn{
+  color: white;
+  font-family: 'DrukTextWideCyr';
+  background-color: $containergreen;
+  font-size: 20px;
+  height: 80px;
+  width: 300px;
+  color: $blackback;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.uslugi__btn:hover{
+  opacity: 0.7;
+}
+
+.uslugi__info{
+  left: calc((100vw - 1017px)/2);
+  position: relative;
+  font-family: 'Raleway-Regular';
+  min-height: 160px;
+  width: 80%;
+  background-color: $purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  padding: 40px;
+  font-size: 20px;
+}
+
+
+@media (max-width: 1100px){
+  .uslugi__info{
+    left: 50px;
+  }
+}
+
+@media (max-width: 900px){
+  .uslugi__container{
+    flex-direction: column;
+  }
+  .uslugi__particle{
+    opacity: 0.3;
+  }
+  .uslugi__list{
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px){
+  .uslugi__bot{
+    flex-direction: column;
+  }
+  .uslugi__info{
+    left: 0;
+    margin-top: 50px;
+  }
+  .uslugi__li{
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 800px){
+  .uslugi__zag{
+    font-size: 30px;
+  }
+  .uslugi__podz{
+    font-size: 30px;
+  }
+}
+
+
+@media (max-width: 390px){
+  .uslugi__zag{
+    font-size: 25px;
+  }
+  .uslugi__podz{
+    font-size: 25px;
+  }
+}

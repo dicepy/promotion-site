@@ -4,69 +4,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/css/intlTelInput.css">
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/css/intlTelInput.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+  <link type="Image/x-icon" href="/favicon.ico" rel="icon">
   <title>Sale It’s</title>
-  <meta name="description" content="Заказать продвижение на авито">
+  <meta name="description" content="Заказать продвижение. Контакты: телеграмм: https://t.me/saleits, вк: https://vk.com/saleits">
   <meta name="Keywords" content="Продвижение, Авито, Услуги, Реклама"> 
-  <meta name="theme-color" content="#FFFFFF"/>
+  <meta name="theme-color" content="#151314"/>
 </head>
 <body>
   <div class="background__main">
-    <img  class="bg__main__img" data-src="img/istockphoto-1370858067-612x612.webp" alt="фон">
   </div>
   <div class="app-wrapper">
 
     <header class="header">
       <div class="logo">
-        <img data-src="img/logo1.webp" alt="логотип" class="logo__img">
-        <h1>Sale It's</h1>
+        <div class="logo__namecontainer">
+          <a href="index.html" class="logo__name">Sale It's</a>
+        </div>
+        
       </div>
       <div class="nav__header">
         <ul class="list__nav nav__menu">
-          <span class="nonedec" id="1"><li class="li__nav active">О нас</li></span>
-          <span class="nonedec" id="2"><li class="li__nav">Гарантии</li></span>
-          <span class="nonedec" id="3"><li class="li__nav">Этапы работы</li></span>
-          <span class="nonedec" id="4"><li class="li__nav">Услуги</li></span>
-          <span class="nonedec" id="5"><li class="li__nav">Отзывы</li></span>
-        </ul>
-      </div>
-      <div class="contacts__header">
-        <ul class="list__nav">
-          <li class="li__nav"><a href="tg.me"><img class="telegramm__logo" data-src="img/icons8-telegram.gif" alt="телеграм"></a></li>
-          <a class="phone__number" href="tel:+79999999999"><li class="li__nav number__header">+79999999999</li></a>
+          <span class="nonedec" id="0" style="display: none;"><li class="li__nav" >321</li></span>
+          <span class="nonedec"><li class="li__nav" id="1">ОТЗЫВЫ</li></span>
+          <span class="nonedec"><li class="li__nav" id="2">УСЛУГИ</li></span>
+          <span class="nonedec"><li class="li__nav" id="3">КОНТАКТЫ</li></span>
         </ul>
       </div>
     </header>
-    
-      <img class="burger__img" id="brg__img" data-src="img/burger-menu-svgrepo-com.svg" alt="бургер меню">
-    
-    
-      <img class="burger__img" id="cross__img" data-src="img/cross-svgrepo-com.svg" alt="закрыть бургер меню">
-    <div id="blackback"></div>
+      <div class="burger__cont">
+        <a href="index.html" class="burger__zag">
+          Sale It's
+        </a>
+        <img class="burger__img" id="brg__img" data-src="img/burger-menu-svgrepo-com.svg" alt="бургер меню">
+        <img class="burger__img" id="cross__img" data-src="img/cross-svgrepo-com.svg" alt="закрыть бургер меню">
+      </div>
+       <div id="blackback"></div>
     <div class="burger__wrapper" id="burger__wrap">
       <div class="burger__menu">
-        <div class="logo logo__burger">
-          <img data-src="img/logo1.webp" alt="логотип" class="logo__img">
-          <h1>Sale It's</h1>
-        </div>
         <ul class="burger__list">
-          <li class="burger__item">О нас</li>
-          <li class="burger__item">Услуги</li>
-          <li class="burger__item">Контакты</li>
+          
+          <li class="burger__item" id="mob1">ОТЗЫВЫ</li>
+          <li class="burger__item" id="mob2">УСЛУГИ</li>
+          <li class="burger__item" id="mob3">КОНТАКТЫ</li>
+          <li class="burger__item" id="burger__btn">Оставить<br/> заявку</li>
         </ul>
-        <div class="contacts__header contacts__header__burger">
-          <ul class="list__nav">
-            <li class="li__nav"><a href="tg.me"><img class="telegramm__logo tglogo__burger" data-src="img/icons8-telegram.gif" alt="телеграм"></a></li>
-            <a class="phone__number" href="tel:+79999999999"><li class="li__nav number__header">+79999999999</li></a>
-          </ul>
-        </div>
       </div>
     </div>
     
@@ -76,221 +66,231 @@
     <div class="main">
       
       <div class="section info element-animation" id="onas">
-        <div class="info__wrapper">
-          <h1 id="zagolovok__first" class="info__zagolovok">Заказать продвижение на авито</h1>
-          <p class="info__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi architecto quod rem voluptatem mollitia doloremque similique, aliquid sequi nobis libero porro ipsam laboriosam molestiae temporibus, dolores voluptatibus, corrupti recusandae exercitationem.</p>
-          <div id="scroll-to-services" href="">Заказать</div>
-        </div>
-        <img class="info__img" data-src="img/logo1.webp" alt="логотип">
-
+        <img data-src="img/shtrih.webp" alt="штрих" class="shtrih">
         
-
-      </div>
-      <div class="section guarantees element-animation" id="garantii">
-        <h1 id="zagolovok__second" class="info__zagolovok">
-          Почему обращаются к нам
-        </h1>
-        <div class="proofs">
-          <div class="proofs__el">
-            <img class="proof__img" data-src="img/clock.svg" alt="часы">
-            <h2 class="proof_zagolovok">Заголовок</h2>
-            <p class="proofs__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
-          </div>
-          <div class="proofs__el">
-            <img class="proof__img" data-src="img/wallet.svg" alt="кошелек">
-            <h2 class="proof_zagolovok">Заголовок</h2>
-            <p class="proofs__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
-          </div>
-          <div class="proofs__el">
-            <img class="proof__img" data-src="img/graph.svg" alt="график">
-            <h2 class="proof_zagolovok">Заголовок</h2>
-            <p class="proofs__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
-          </div>
-          <div class="proofs__el">
-            <img class="proof__img" data-src="img/guard.svg" alt="безопасность">
-            <h2 class="proof_zagolovok">Заголовок</h2>
-            <p class="proofs__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
-          </div>
+        <div class="container__info" id="container__info__first">
+          <h1 class="info__titles">Агентство</h1>
         </div>
+        <div class="container__info" id="container__info__second">
+          <h1 class="info__titles">Полного</h1>
+          <span class="info__dopinfo">Привлекаем клиентов<br/> 
+            <span class="since">с <i>2020</i> года</span> <br/> 
+            Соответствуем цене и качеству</span>
+        </div>
+        <div class="container__info">
+          <div class="goorder" id="gofirst">Бесплатная консультация</div>
+          <h1 class="info__titles" id="info__titlethird">Цикла</h1>
+          
+        </div>
+        <div class="goorder" id="gosecond">Бесплатная консультация</div>
+      </div>
+      
+      <div class="onas element-animation">
+        <h2 id="zagonas">О нас</h2>
+        <div class="onas__itemcontainer">
+          <p class="onas__item" id="onas__itemfirst">Мы команда, которая помогает выстроить грамотную маркетинговую структуру внутри вашего бизнеса. </p>
+          <div class="onas__item">
+            <div class="numbers__onas">
+              600
+            </div>
+            Запущенных рекламных кампаний  </div>
+          </div>
+        <div class="onas__itemcontainer">
+          <div class="onas__item">
+            <div class="numbers__onas">
+              90%
+            </div>
+            Клиентов продолжают с нами работать</div>
+          <div class="onas__item" id="onas__itemfourth">Большой штат сотрудников и 4 млн откурченного бюджета </div>
+        
+        </div>
+        <div class="onas__imgcont">
+          <img class="yellowparticle" data-src="img/particleyellow.webp" alt="партикл">
+        </div>
+        
       </div>
       
       
-  
-      <!-- <div class="slider section element-animation" id="etapi"> -->
-      <div class="slider section element-animation" id="etapi">
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img data-src="img/малый.webp" class="d-block img-in-slider" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img data-src="img/малый.webp" class="d-block img-in-slider" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img data-src="img/малый.webp" class="d-block img-in-slider" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Предыдущий</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Следующий</span>
-            </button>
-          </div>  
-        </div>
-  
-      <div class="services section element-animation" id="services">
-        <div class="product-item">
-          <img data-src="img/малый.webp" alt="малый пакет">
-          <div class="product-list">
-            <h3>Пакет малый</h3>
-              <span class="price">₽ 4990</span>
-              <div class="button__holder">
-                <button type="button" class="button" id="lilinfo">
-                  Подробнее
-                </button>
-                <button type="button" class="button" id="lil">
-                  Заказать
-                </button>
-              </div>
-              
+      
+      <div class="reasons element-animation">
+        <div class="reasons__left">
+          <div class="reasons__zag">
+            Причины работать с нами
           </div>
-        </div>
-        <div class="product-item">
-          <img data-src="img/средний.webp" alt="средний пакет">
-          <div class="product-list">
-            <h3>Пакет средний</h3>
-              <span class="price">₽ 8990</span>
-              <div class="button__holder">
-                <button type="button" class="button" id="midinfo">
-                  Подробнее
-                </button>
-                <button type="button" class="button" id="mid">
-                  Заказать
-                </button>
-              </div>
+          <div class="reasons__text">
+            <p class="reasons__texttop">
+              В своей работе мы учитываем все факторы, которые влияют на
+            </p>
+            <p class="reasons__textbot">
+              комфорт работы между нашей командой и клиентом
+            </p>
           </div>
+          <img data-src="img/galka.webp" alt="партикл" class="reasons__img">
         </div>
-        <div class="product-item">
-          <img data-src="img/Большой.webp" alt="большой пакет">
-          <div class="product-list">
-            <h3>Пакет большой</h3>
-              <span class="price">₽ 14990</span>
-              <div class="button__holder">
-                <button type="button" class="button" id="largeinfo">
-                  Подробнее
-                </button>
-                <button type="button" class="button" id="large">
-                  Заказать
-                </button>
-              </div>
+        <div class="reasons__right">
+          <div class="reasons__rightcont">
+            <p class="reasons__rightzag">
+              Высокая лояльность
+            </p>
+            <p class="reasons__righttext">
+              Более 90% клиентов удовлетворены форматом работы с нами
+            </p>
           </div>
-        </div>
-        <div class="product-item">
-          <img data-src="img/Мега.webp" id="mega" alt="мега пакет">
-          <div class="product-list">
-            <h3>Пакет мега</h3>
-              <span class="price">₽ 29990</span>
-              <div class="button__holder">
-                <button type="button" class="button" id="insaneinfo">
-                  Подробнее
-                </button>
-                <button type="button" class="button" id="insane">
-                  Заказать
-                </button>
-              </div>
+          <div class="reasons__rightcont">
+            <p class="reasons__rightzag">
+              Обратная связь
+            </p>
+            <p class="reasons__righttext">
+              Персональный менеджер дает регулярную и своевременную обратную связь о развитии проекта
+            </p>
           </div>
-        </div>
-        
-
-      </div>
-      <div class="modalwindoworder">
-          
-        <div class="window__main">
-          <form action="tg.php" method="POST">
-            <h2 class="window__title" id="nameofmodal"></h2>
-            <div class="window_container">
-              <div class="modal__container">
-                <p class="modal__paragraph">Описание товара</p>
-                <div class="price__modal" id="price__order">
-                  <span class="modal__paragraph" id="modal__price"></span>
-                  <span>₽</span>
-                </div>
-                
-                
-
-              </div>
-              <fieldset class="inputs">
-                <input id="pagefrom__input" type="hidden" name="pagefrom"/>
-                <input id="totalprice" type="hidden" name="totalprice"/>
-                <input class="window__nameinput" type="text" autocomplete="name" name="user_name" id="text_name" placeholder="Ваше имя"/>
-              </fieldset>
-              <fieldset class="inputs">
-                <input class="window__phoneinput telofperson" autocomplete="tel" required type="tel" name="user_phone" id="text_phone" placeholder="Ваш номер телефона"/>
-              </fieldset>
-              <fieldset class="inputs">
-                <input class="window__emailinput" type="text"name="user_telegramm" id="text_email" placeholder="Ваш Telegram"/>
-              </fieldset>
-              <fieldset class="inputs" id="promofield">
-                <input class="window__promoinput" type="text" name="user_promo" id="text_promo" placeholder="Промокод"/>
-              </fieldset>
-              <div class="window__close">&#10006;</div>
-              <button class="btn btn__submit" type="submit">Подтвердить</button>
-            </div>
-          </form>
-          
+          <div class="reasons__rightcont">
+            <p class="reasons__rightzag">
+              Тайм-менеджмент
+            </p>
+            <p class="reasons__righttext">
+              Мы заранее планируем время и даты созвонов, подстраиваясь под ваш часовой пояс 
+            </p>
+          </div>
         </div>
       </div>
-      <div class="otzivi element-animation section" >
-        <h1 id="zagolovok__second" class="info__zagolovok">
+
+      <h2 class="specs element-animation section">
+        <div class="specs__zag">
+          Наши<br/> специалисты
+        </div>
+        <div class="specs__wrapper">
+          <div class="specs__wrapper-top">
+            <div class="specs__item">
+              <div class="specs__itemzag">
+                Управление :
+              </div>
+              <ul class="specs__itemtext">
+                <li>Проектный менеджер </li>
+                <li>Маркетолог</li>
+              </ul>
+            </div>
+            <div class="specs__item">
+              <div class="specs__itemzag">
+                Сайты :
+              </div>
+              <ul class="specs__itemtext">
+                <li>Дизайнер </li>
+                <li>Фронтенд-разработчик </li>
+                <li>Бэкенд-разработчик</li>
+              </ul>
+            </div>
+          </div>
+          <div class="specs__bottom">
+            <div class="specs__item" id="specs__last">
+              <div class="specs__itemzag">
+                Реклама :
+              </div>
+              <div class="specs__cont">
+                <ul class="specs__itemtext">
+                  <li>Копирайтер  </li>
+                  <li>Контент-менеджер </li>
+                </ul>
+                <ul class="specs__itemtext">
+                  <li>SEO-специалист </li>
+                  <li>Директолог </li>
+                </ul>
+                <ul class="specs__itemtext">
+                  <li>Таргетолог </li>
+                  <li>Авитолог </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </h2>
+
+      <div class="otzivi element-animation section" id="otzivi">
+        <h2 class="otzivi__zag">
           Отзывы
-        </h1>
-        <div class="otzivi__examples">
-          <div class="otzivi__el " id="otziv">
-            <img class="otzivi__img" data-src="img/Большой.webp" alt="...">
-            <h2 class="otzivi_zagolovok">Имя</h2>
-            <p class="otzivi__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
+        </h2>
+        <div class="otzivi__container">
+          <img data-src="img/otziv1.webp" alt="Отзыв 1" class="otziv__img">
+          <img data-src="img/otziv2.webp" alt="Отзыв 2" class="otziv__img">
+          <img data-src="img/otziv3.webp" alt="Отзыв 3" class="otziv__img">
+        </div>
+      </div>
+
+      <div class="uslugi element-animation section" id="uslugi">
+        <div class="uslugi__container">
+          <div class="uslugi__zag">
+            Услуги<br/>
+            <span class="uslugi__podz">что входит</span>
           </div>
-          <div class="otzivi__el">
-            <img class="otzivi__img" data-src="img/Большой.webp" alt="...">
-            <h2 class="otzivi_zagolovok">Имя</h2>
-            <p class="otzivi__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
+          <div class="uslugi__table">
+            <ul class="uslugi__list">
+              <li class="uslugi__li">Разработка стратегии продвижения социальных сетей (ВК/Inst) </li>
+              <li class="uslugi__li">Создание рекламных креативов дизайнером</li>
+              <li class="uslugi__li">Разработка индивидуального дизайна сайта</li>
+              <li class="uslugi__li">Продвижение на Авито</li>
+              <li class="uslugi__li">Продвижение через квиз </li>
+              <li class="uslugi__li">Контекстная реклама в Яндекс.Директ</li>
+              <li class="uslugi__li">SEO оптимизация карточек для выдачи в ТОП</li>
+              <li class="uslugi__li">Оптимизация рекламы рентабельного источника</li>
+            </ul>
           </div>
-          <div class="otzivi__el">
-            <img class="otzivi__img" data-src="img/Большой.webp" alt="...">
-            <h2 class="otzivi_zagolovok">Имя</h2>
-            <p class="otzivi__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
+        </div> 
+        <img data-src="img/uslugi__particle.webp" alt="партикл" class="uslugi__particle">
+        <div class="uslugi__bot">
+          <div class="uslugi__btn" id="uslugi__btn">
+            Оставить заявку
           </div>
-          <div class="otzivi__el">
-            <img class="otzivi__img" data-src="img/Большой.webp" alt="...">
-            <h2 class="otzivi_zagolovok">Имя</h2>
-            <p class="otzivi__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eum sit ad saepe cumque sapiente magni voluptatibus similique veritatis magnam rerum nobis unde accusantium, ullam amet culpa ea delectus numquam.</p>
+          <div class="uslugi__info">
+            Участвуем на всех этапах работы и консультируем по любым вопросам маркетинга. 
+            <br/>
+            Также помогаем в разработке акций и спец. предложений  
           </div>
+          
+        </div>
+      </div>
+
+      <div class="meet element-animation section" id="meet">
+        <div class="meet_zag">
+          ДАВАЙТЕ ЗНАКОМИТЬСЯ 
+        </div>
+        <div class="meet_cont">
+          <div class="meet_info">
+            РАССКАЖИТЕ О ВАШИХ ЗАДАЧАХ И МЫ НАЙДЕМ РЕШЕНИЕ
+          </div>
+          <form action="tg.php" method="POST" class="meet__form">
+            <fieldset class="inputs">
+              <input class="window__nameinput" type="text" autocomplete="name" name="user_name" id="text_name" placeholder="Ваше имя"/>
+            </fieldset>
+            <fieldset class="inputs">
+              <input class="window__phoneinput telofperson" autocomplete="tel" required type="tel" name="user_phone" id="text_phone" placeholder="Ваш номер телефона"/>
+            </fieldset>
+            <fieldset class="inputs" id="promofield">
+              <input class="window__promoinput" type="text" name="user_promo" id="text_promo" placeholder="Промокод"/>
+            </fieldset>
+            <button class="btn btn__submit" type="submit">Отправить</button>
+          </form>
         </div>
       </div>
 
     </div>
-
+    <footer id="footer">
+        <div class="footer__zag">
+          МЫ В СОЦ. СЕТЯХ
+        </div>
+        <div class="footer__imgscont">
+          <a href="https://vk.com/saleits"><img data-src="img/vk.webp" alt="вк" class="footer__img" id="vk"></a>
+          <a href="https://t.me/saleits"><img data-src="img/tg.webp" alt="телеграм" class="footer__img"></a>
+        </div>
+        <div class="footer__contacts">
+          Контакты
+        </div>
+    </footer>
   </div>
+
   <script defer src="script/script.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-  
   <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/intlTelInput.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script defer src="./script/promo.js"></script>
-  <script src="https://unpkg.com/imask"></script>
+  <script defer src="https://unpkg.com/imask"></script>
+  <script defer src="script/promo.js"></script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+@import '../../colors';
+
+.meet{
+  margin-bottom: 50px;
+}
+
+
+.meet_zag{
+  color: $white;
+  font-family: 'DrukTextWideCyr';
+  font-size: 50px;
+  text-align: center;
+}
+
+.meet_cont{
+  display: flex;
+  justify-content: space-between;
+}
+
+.meet_info{
+  color: $containergreen;
+  font-family: 'Raleway-Regular';
+  font-size: 20px;
+  text-align: center;
+  width: 30%;
+  margin: 30px;
+  text-align: start;
+}
+
+.meet__form{
+  margin: 30px;
+  width: 60%;
+  height: 100%;
+  fieldset{
+    padding: 0;
+  }
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+    background-color: $white;
+    margin-bottom: 10px;
+    font-family: 'Raleway-Bold';
+    transition: .3s;
+  }
+  .btn{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: $containergreen;
+    font-family: 'Raleway-Bold';
+  }
+}
+
+@media (max-width: 800px){
+  .meet_cont{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .meet_info{
+    width: 80%;
+    text-align: center;
+  }
+  .meet_zag{
+    font-size: 30px;
+  }
+  .meet_info{
+    font-size: 15px;
+  }
+  .meet__form{
+    width: 100%;
+  }
+}
+
+.invalidpromo{
+  color: red;
+}
+
+.validpromo{
+  color: green;
+}
+
+@media (max-width: 390px){
+  .meet_zag{
+    font-size: 25px;
+  }
+}

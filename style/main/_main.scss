@@ -1,5 +1,6 @@
+@import '../colors';
+
 .main{
-  margin-top: 70px;
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
@@ -20,11 +21,10 @@
 }
 
 .background__main{
+  width: 100%;
+  height: 100%;
   top: 0;
   position: fixed;
   z-index: -1;
-}
-
-.bg__main__img{
-  height: 100vh;
+  background-color: $blackback;
 }
