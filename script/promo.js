@@ -1,16 +1,10 @@
-const promo = {
-  'first': 0.8,
-  'second': 0.7,
-  'third': 0.5,
-  'fourth':0.123499
-};
-
+const promo = ['first']
 
 document.addEventListener('DOMContentLoaded', function(){
   totalprice = document.getElementById('totalprice');
-  $( "#text_promo" ).on( "keyup", function() {// baseprice = document.getElementById('modal__price').getAttribute('data-price');
+  $( "#text_promo" ).on( "keyup", function() {
     setTimeout(() => {
-      for (const prop in promo) {
+      for (const prop of promo) {
         if (document.getElementById('text_promo').value === prop){
           document.getElementById('text_promo').classList.remove('invalidpromo');
           document.getElementById('text_promo').classList.add('validpromo');

@@ -41,6 +41,7 @@ let scrolls = {
   },
 }
 
+
 document.addEventListener('DOMContentLoaded', (event) => {
   services = $('.services');
   page = document.getElementById('pagefrom__input');
@@ -100,7 +101,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
               el.classList.remove('active');
             }
           });
-          document.querySelectorAll('span')[i].querySelector('.li__nav').classList.add('active');
+          document.querySelectorAll('.li__nav')[i].classList.add('active');
         }
       });
     } 

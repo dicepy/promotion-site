@@ -36,9 +36,11 @@
 }
 
 .reasons__img{
-  width: 30%;
+  width: 300px;
   max-width: 200px;
 }
+
+
 
 .reasons__right{
   background-color: white;
@@ -83,6 +85,9 @@
   .reasons__left{
     text-align: center;
   }
+  .reasons__img{
+    width: 250px;
+  }
 }
 
 @media (max-width: 800px){
@@ -95,6 +100,9 @@
   .reasons__rightcont{
     padding-right: 0px;
   }
+  .reasons__img{
+    width: 200px;
+  }
 }
 
 @media (max-width: 600px){
@@ -104,5 +112,8 @@
   }
   .reasons__righttext{
     font-size: 20px;
+  }
+  .reasons__img{
+    width: 150px;
   }
 }

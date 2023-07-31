@@ -66,6 +66,7 @@ img[data-src] {
   src: url("../../../fonts/Raleway-Bold.ttf") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
+  font-display: swap;
   } 
 
 @font-face {
@@ -74,6 +75,7 @@ img[data-src] {
   src: url("../../../fonts/druktextwidecyr-medium.otf") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
+  font-display: swap;
   } 
 
   
@@ -84,4 +86,5 @@ img[data-src] {
   src: url("../../../fonts/Raleway-Regular.ttf") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
+  font-display: swap;
   } 

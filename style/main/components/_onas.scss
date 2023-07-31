@@ -53,16 +53,26 @@
 }
 
 .yellowparticle{
-  width: 90%;
+  width: 900px;
   min-width: 300px;
   position: absolute;
   top: 10%;
   left: -50%;
   z-index: -1;
 }
-
+@media (max-width: 1200px){
+  .yellowparticle{
+    width: 800px;
+  }
+  #zagonas{
+    text-align: center;
+  }
+}
 
 @media (max-width: 900px){
+  .yellowparticle{
+    width: 700px;
+  }
   .onas__itemcontainer{
     flex-wrap: wrap;
   }
@@ -74,6 +84,9 @@
 }
 
 @media (max-width: 600px){
+  .yellowparticle{
+    width: 400px;
+  }
   .onas__item, #onas__itemfourth{
     font-size: large;
   }
@@ -85,8 +98,4 @@
   }
 }
 
-@media (max-width: 1200px){
-  #zagonas{
-    text-align: center;
-  }
-}
+

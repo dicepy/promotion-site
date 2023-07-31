@@ -40,11 +40,12 @@
 
 .uslugi__particle{
   position: absolute;
-  width: 55%;
+  width: 550px;
   top: 20%;
   left: -20%;
   z-index: -1;
 }
+
 
 .uslugi__bot{
   display: flex;
@@ -92,6 +93,10 @@
   .uslugi__info{
     left: 50px;
   }
+  .uslugi__particle{
+    width: 450px;
+  }
+  
 }
 
 @media (max-width: 900px){
@@ -104,6 +109,10 @@
   .uslugi__list{
     margin: 0;
   }
+  .uslugi__particle{
+    width: 380px;
+  }
+  
 }
 
 @media (max-width: 600px){
@@ -117,6 +126,10 @@
   .uslugi__li{
     font-size: 20px;
   }
+  .uslugi__particle{
+    width: 300px;
+  }
+  
 }
 
 
@@ -137,4 +150,8 @@
   .uslugi__podz{
     font-size: 25px;
   }
+  .uslugi__particle{
+    width: 200px;
+  }
+  
 }
